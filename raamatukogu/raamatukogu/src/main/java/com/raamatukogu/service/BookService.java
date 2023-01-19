@@ -100,6 +100,6 @@ public class BookService {
     }
 
     public List<Book> searchBooks(String keyword) {
-        return bookRepository.searchBooks(keyword);
+        return bookRepository.searchBooks(keyword.toLowerCase());
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    @Query(value = "Select * FROM books b WHERE book_name LIKE %?1% OR author LIKE %?1% "
+    @Query(value = "Select * FROM books b WHERE LOWER(book_name) LIKE %?1% OR LOWER(author) LIKE %?1% "
             + "OR CONCAT(b.isbn, '') LIKE %?1%", nativeQuery = true)
     List<Book> searchBooks( String keyword);
 }

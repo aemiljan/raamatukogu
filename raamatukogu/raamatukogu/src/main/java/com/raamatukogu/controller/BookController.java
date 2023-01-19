@@ -1,7 +1,6 @@
 package com.raamatukogu.controller;
 
 import com.raamatukogu.model.Book;
-import com.raamatukogu.model.Reader;
 import com.raamatukogu.model.entities.PublicBook;
 import com.raamatukogu.service.BookService;
 import org.springframework.http.HttpStatus;

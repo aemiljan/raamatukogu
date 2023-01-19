@@ -56,6 +56,6 @@ public class ReaderService {
     }
 
     public List<Reader> searchReaders(String keyword) {
-        return readerRepository.searchReaders(keyword);
+        return readerRepository.searchReaders(keyword.toLowerCase());
     }
 }
